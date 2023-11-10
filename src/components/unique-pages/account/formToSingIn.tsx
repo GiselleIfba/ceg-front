@@ -190,7 +190,8 @@ export default function SingInForm() {
   console.log(isSubmitting);
   const handleSubmitData = async (data: any) => {
     console.log(data);
-    api.post("http://localhost:3333/login", data).then(function (response) {
+    
+    api.post("https://api-ceg-shop.onrender.com/login", data).then(function (response) {
       //verificando se ja existe um user
       if (localStorage.hasOwnProperty("user")) {
         console.log("já está logado");
@@ -237,10 +238,10 @@ export default function SingInForm() {
           <Accounts>
             <span>João</span>
             <li>jaoxpg@gmail.com</li>
-            <li>senha</li>
+            <li>123abc</li>
             <span>Hanna</span>
             <li>minihanna@gmail.com</li>
-            <li>senha</li>
+            <li>123abc</li>
             <span>Alice</span>
             <li>alicinhacastro@gmail.com</li>
             <li>123abc</li>

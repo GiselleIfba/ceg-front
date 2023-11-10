@@ -40,26 +40,30 @@ const Img = styled.img`
   border-radius: 9999px;
 `;
 
+export default function Profile() {
+  function clean(){
+    localStorage.removeItem("user");
+    localStorage.removeItem("imgUser");
+    window.location.reload();
+}  return (
+    <>
+      <h1>the account page is not yet created</h1>
+      <h2>Visit later</h2>
+      <button onClick={clean}>Diconnect</button>
+    </>
+  );
+  //     console.log(data)
+  //     return(
+  //         <Conteiner>
+  //             <OptionsCase>
 
-export default function Profile(){
-
-    return(
-        <>
-        <h1>oi</h1>
-        </>
-    )
-//     console.log(data)
-//     return(
-//         <Conteiner>
-//             <OptionsCase>
-
-//             </OptionsCase>
-//             <Options>
-//                 <ImgCase>
-//                     <Img src={data?.data.url_img}/>
-//                 </ImgCase>
-//             </Options>
-//         </Conteiner>
-//     )
-// }
+  //             </OptionsCase>
+  //             <Options>
+  //                 <ImgCase>
+  //                     <Img src={data?.data.url_img}/>
+  //                 </ImgCase>
+  //             </Options>
+  //         </Conteiner>
+  //     )
+  // }
 }
