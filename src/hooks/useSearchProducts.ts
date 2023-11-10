@@ -4,8 +4,10 @@ import { AxiosPromise } from "axios";
 import { useQuery } from "react-query";
 
 const getSearchProduct = async (searchParamsProduct: string) => {
+
+  const url = process.env.REACT_APP_URL || "https://api-ceg-shop.onrender.com"
   return api
-    .get(`http://localhost:3333/search/value?filter=${searchParamsProduct}`)
+    .get(`${url}/search/value?filter=${searchParamsProduct}`)
     .then((response) => response.data);
 };
 

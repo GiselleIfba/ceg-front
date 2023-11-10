@@ -4,8 +4,9 @@ import { AxiosPromise } from "axios";
 import { useQuery } from "react-query";
 
 const getUser = (userId: string, token:string): AxiosPromise<IUser> => {
+  const url = process.env.REACT_APP_URL || "https://api-ceg-shop.onrender.com"
   return api
-    .post(`http://localhost:3333/getuser`, {userId}, {
+    .post(`${url}/getuser`, {userId}, {
 headers:{
 
     'Authorization': `Bearer ${token}`

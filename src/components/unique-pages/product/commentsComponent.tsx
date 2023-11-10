@@ -134,7 +134,7 @@ export default function Comments(comments: Array<IComments>, T:Array<IUser>) {
   return (
     <CommentsConteiner>
       <YouComment>
-        <Stars>Avaliações: {totalReviews}</Stars>
+        <Stars>Média de Avaliações: {totalReviews}</Stars>
         <MyCommenter>
           <TopCase>
             <MyAccount>
