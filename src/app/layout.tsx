@@ -1,4 +1,4 @@
-'use client'
+
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { QueryClient, QueryClientProvider } from "react-query";
@@ -38,7 +38,7 @@ const queryClient = new QueryClient({
 const poppins =  Poppins({ subsets: ['latin'], weight:['200','400','600']})
 
 export const metadata: Metadata = {
-  title: 'Soares Shopping',
+  title: 'Ceg Shopping',
   description: 'The Better Shopping For Your Style',
 }
 
