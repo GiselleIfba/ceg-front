@@ -155,7 +155,7 @@ export default function GetProductsCart(cartArray: []) {
             </Checked>
             <Link href={`/product?id=${item.id}`}>
               <ProductImgConteiner>
-                <ProductImg src={item.url_img}></ProductImg>
+                <ProductImg src={item.url_img[0]}></ProductImg>
               </ProductImgConteiner>
             </Link>
             <ConteinerToAlign>

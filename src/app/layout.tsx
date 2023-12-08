@@ -1,11 +1,13 @@
-
+'use client'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { theme } from './global.style';
 import NavBar from '@/components/header/header';
+import cors from 'cors'
 
+cors()
 
 const GlobalStyle = createGlobalStyle`
 * {

@@ -6,6 +6,7 @@ import { api } from "@/services/api";
 import { useEffect, useState } from "react";
 import Profile from './account';
 import { useUser } from "@/hooks/useGetUser";
+import { API } from "@/services/url-api";
 
 const Conteiner = styled.div`
   display: grid;
@@ -133,7 +134,7 @@ const RightSide = styled.section`
   flex-direction: column;
   width: 600px;
   height: 600px;
-  background-color: ${(props) => props.theme.colors.green};
+  background-color: ${(props) => props.theme.colors.blue};
   border-radius: 29px;
 `;
 const Accounts = styled.div`
@@ -191,7 +192,7 @@ export default function SingInForm() {
   const handleSubmitData = async (data: any) => {
     console.log(data);
     
-    api.post("https://api-ceg-shop.onrender.com/login", data).then(function (response) {
+    api.post(`${API}/login`, data).then(function (response) {
       //verificando se ja existe um user
       if (localStorage.hasOwnProperty("user")) {
         console.log("já está logado");
@@ -238,13 +239,13 @@ export default function SingInForm() {
           <Accounts>
             <span>João</span>
             <li>jaoxpg@gmail.com</li>
-            <li>123abc</li>
+            <li>abc123</li>
             <span>Hanna</span>
             <li>minihanna@gmail.com</li>
-            <li>123abc</li>
+            <li>abc123</li>
             <span>Alice</span>
             <li>alicinhacastro@gmail.com</li>
-            <li>123abc</li>
+            <li>abc123</li>
           </Accounts>
         </RightSide>
       </Conteiner>
